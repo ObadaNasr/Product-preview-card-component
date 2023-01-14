@@ -1,0 +1,155 @@
+:root {
+    --background: #F2EAE2;
+    --primary: #6C7289;
+    --secondary: #1C232B;
+    --tetrary: #3D8168;
+    --var-01: #1A4032;
+    --font: 'Montserrat';
+    --headerFont: 'Fraunces';
+    --white: #FFFFFF;
+}
+
+html,
+body {
+    font-family: var(--font), sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 37.5rem;
+    height: 28.125rem;
+    border-radius: 10px;
+
+}
+
+.main .desktop-product {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+}
+
+.main .mobile-product{
+    display: none;
+}
+
+.main .right-side {
+    padding: 2rem;
+}
+
+span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: 5px;
+}
+
+p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+h1 {
+    font-family: var(--headerFont), serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: var(--secondary);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.price .new-price {
+    font-family: var(--headerFont);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: var(--tetrary);
+}
+
+.price .old-price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration-line: line-through;
+    letter-spacing: 0;
+    margin-left: 20px;
+}
+
+
+.button.button-add2cart {
+    display: flex;
+    width: 236px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background: var(--tetrary);
+    border-radius: 8px;
+    box-shadow: none;
+    border: 0;
+}
+
+.button.button-add2cart:hover{
+    background-color: var(--var-01);
+    cursor: pointer;
+}
+
+.button.button-add2cart span {
+    padding-left: 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0;
+    color: var(--white);
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    html,
+    body{
+        align-items: flex-start;
+    }
+    .main{
+        margin: 28px 0;
+        flex-direction: column;
+        width: 343px;
+        height: fit-content;
+    }
+
+    .main .right-side{
+        padding: 24px;
+    }
+
+    .main .desktop-product{
+        display: none;
+    }
+
+    .main .mobile-product{
+        display: block;
+        height: 240px;
+        border-radius: 10px 10px 0 0;
+    }
+}
